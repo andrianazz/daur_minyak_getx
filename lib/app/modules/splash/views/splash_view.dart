@@ -1,4 +1,5 @@
 import 'package:daur_minyak_getx/app/data/models/splash_model.dart';
+import 'package:daur_minyak_getx/app/routes/app_pages.dart';
 import 'package:daur_minyak_getx/misc/methods.dart';
 import 'package:daur_minyak_getx/widgets/button_widget.dart';
 import 'package:daur_minyak_getx/widgets/carousel_widget.dart';
@@ -49,7 +50,7 @@ class SplashView extends GetView<SplashController> {
                 ButtonWidget(
                     text: "Daftar",
                     onPressed: () {
-                      // ref.read(routerProvider).pushNamed("register");
+                      Get.toNamed(Routes.REGISTER);
                     }),
               ],
             ),
