@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:daur_minyak_getx/app/modules/daur_minyak/bindings/daur_minyak_binding.dart';
+import 'package:daur_minyak_getx/app/modules/daur_minyak/views/daur_minyak_view.dart';
 import 'package:daur_minyak_getx/app/modules/home/bindings/home_binding.dart';
 import 'package:daur_minyak_getx/app/modules/home/views/home_view.dart';
 import 'package:daur_minyak_getx/app/modules/login/bindings/login_binding.dart';
@@ -36,8 +38,13 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () => LoginView(),
+      page: () => const LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.DAUR_MINYAK,
+      page: () => const DaurMinyakView(),
+      binding: DaurMinyakBinding(),
     ),
   ];
 }

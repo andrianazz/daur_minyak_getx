@@ -2,6 +2,7 @@ import 'package:daur_minyak_getx/app/modules/home/views/akun_page/akun_page.dart
 import 'package:daur_minyak_getx/app/modules/home/views/beranda_page.dart/beranda_page.dart';
 import 'package:daur_minyak_getx/app/modules/home/views/pesan_masuk_page/pesan_masuk_page.dart';
 import 'package:daur_minyak_getx/app/modules/home/views/pesanan_page/pesanan_page.dart';
+import 'package:daur_minyak_getx/app/routes/app_pages.dart';
 import 'package:daur_minyak_getx/misc/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -56,6 +57,7 @@ class HomeView extends GetView<HomeController> {
           // ref.read(routerProvider).pushNamed("daur_minyak");
 
           // TODO: DAURMINYAK
+          Get.toNamed(Routes.DAUR_MINYAK);
         },
         child: Image.asset(
           "assets/icon_process.png",
