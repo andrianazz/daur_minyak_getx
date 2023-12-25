@@ -1,4 +1,5 @@
 import 'package:daur_minyak_getx/app/routes/app_pages.dart';
+import 'package:daur_minyak_getx/misc/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -31,22 +32,34 @@ class LoginController extends GetxController {
         Get.back();
 
         Get.snackbar(
-            'Login success', 'Welcome ${userCredential.user!.displayName}');
+          'Login success',
+          'Welcome ${userCredential.user!.displayName}',
+          backgroundColor: primaryColor,
+        );
         Get.offAllNamed(Routes.HOME);
       } else {
         Get.back();
 
-        Get.snackbar('Login failed', 'Please check your email and password');
+        Get.snackbar('Login failed', 'Please check your email and password',
+            backgroundColor: orangeColor);
       }
     } on FirebaseException catch (e) {
       Get.back();
 
-      Get.snackbar('Login failed', e.message!);
+      Get.snackbar(
+        'Login failed',
+        e.message!,
+        backgroundColor: orangeColor,
+      );
       debugPrint(e.toString());
     } catch (e) {
       Get.back();
 
-      Get.snackbar('Login failed', e.toString());
+      Get.snackbar(
+        'Login failed',
+        e.toString(),
+        backgroundColor: orangeColor,
+      );
     } finally {
       isLoading.value = false;
       Future.delayed(const Duration(seconds: 2), () {
