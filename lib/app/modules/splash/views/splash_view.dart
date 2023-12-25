@@ -44,7 +44,7 @@ class SplashView extends GetView<SplashController> {
                 ButtonWidget(
                     text: "Masuk",
                     onPressed: () {
-                      // ref.read(routerProvider).pushNamed("login");
+                      Get.toNamed(Routes.LOGIN);
                     }),
                 horizontalSpace(20.w),
                 ButtonWidget(

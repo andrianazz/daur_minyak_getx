@@ -1,6 +1,7 @@
 // ignore_for_file: library_prefixes
 
 import 'package:daur_minyak_getx/app/data/entities/User.dart';
+import 'package:daur_minyak_getx/app/routes/app_pages.dart';
 import 'package:daur_minyak_getx/misc/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -92,7 +93,8 @@ class RegisterController extends GetxController {
           "Akun berhasil dibuat",
           backgroundColor: primaryColor,
         );
-        //TODO: Navigate to login page
+
+        Get.offAllNamed(Routes.LOGIN);
       }
     } on FirebaseException catch (e) {
       Get.back();
